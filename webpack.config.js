@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js', // Ensure this path is correct
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -14,12 +14,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-proposal-class-properties']
+            presets: ['@babel/preset-env'],
           }
         }
       }
     ]
   },
-  mode: 'development', // or 'production'
+  mode: 'development',
 };
